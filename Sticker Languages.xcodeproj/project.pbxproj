@@ -15,7 +15,61 @@
 		E7BF3E4B1BFBE4E600941789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BF3E491BFBE4E600941789 /* Main.storyboard */; };
 		E7BF3E4D1BFBE4E600941789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BF3E4C1BFBE4E600941789 /* Assets.xcassets */; };
 		E7BF3E501BFBE4E600941789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BF3E4E1BFBE4E600941789 /* LaunchScreen.storyboard */; };
+		E7BF3E5F1BFBE68E00941789 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3E5E1BFBE68E00941789 /* KeyboardViewController.m */; };
+		E7BF3E631BFBE68E00941789 /* Sticker Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7BF3E5B1BFBE68E00941789 /* Sticker Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7BF3E721BFBE93000941789 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E6B1BFBE92F00941789 /* Bolts.framework */; };
+		E7BF3E731BFBE93000941789 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E6B1BFBE92F00941789 /* Bolts.framework */; };
+		E7BF3E741BFBE93000941789 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E6C1BFBE93000941789 /* Parse.framework */; };
+		E7BF3E751BFBE93000941789 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E6C1BFBE93000941789 /* Parse.framework */; };
+		E7BF3E831BFBE9CB00941789 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E801BFBE9CB00941789 /* AudioToolbox.framework */; };
+		E7BF3E841BFBE9CB00941789 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E811BFBE9CB00941789 /* CFNetwork.framework */; };
+		E7BF3E851BFBE9CB00941789 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E821BFBE9CB00941789 /* CoreGraphics.framework */; };
+		E7BF3E891BFBE9DB00941789 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E861BFBE9DB00941789 /* QuartzCore.framework */; };
+		E7BF3E8A1BFBE9DB00941789 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E871BFBE9DB00941789 /* Security.framework */; };
+		E7BF3E8B1BFBE9DB00941789 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E881BFBE9DB00941789 /* StoreKit.framework */; };
+		E7BF3E8D1BFBE9E800941789 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E8C1BFBE9E800941789 /* CoreLocation.framework */; };
+		E7BF3E901BFBE9FD00941789 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E8E1BFBE9FD00941789 /* libz.tbd */; };
+		E7BF3E911BFBE9FD00941789 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E8F1BFBE9FD00941789 /* SystemConfiguration.framework */; };
+		E7BF3E921BFBEA4600941789 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E801BFBE9CB00941789 /* AudioToolbox.framework */; };
+		E7BF3E931BFBEA4700941789 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E811BFBE9CB00941789 /* CFNetwork.framework */; };
+		E7BF3E941BFBEA4700941789 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E821BFBE9CB00941789 /* CoreGraphics.framework */; };
+		E7BF3E951BFBEA4700941789 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E8C1BFBE9E800941789 /* CoreLocation.framework */; };
+		E7BF3E961BFBEA4700941789 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E8E1BFBE9FD00941789 /* libz.tbd */; };
+		E7BF3E971BFBEA4700941789 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E861BFBE9DB00941789 /* QuartzCore.framework */; };
+		E7BF3E981BFBEA4700941789 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E871BFBE9DB00941789 /* Security.framework */; };
+		E7BF3E991BFBEA4700941789 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E881BFBE9DB00941789 /* StoreKit.framework */; };
+		E7BF3E9A1BFBEA4700941789 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E8F1BFBE9FD00941789 /* SystemConfiguration.framework */; };
+		E7BF3E9C1BFBEA4700941789 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E9B1BFBEA4700941789 /* libsqlite3.tbd */; };
+		E7BF3E9D1BFBEAB100941789 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BF3E9B1BFBEA4700941789 /* libsqlite3.tbd */; };
+		E7BF3EA21BFBEF1100941789 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EA11BFBEF1100941789 /* Location.m */; };
+		E7BF3EA31BFBEF1100941789 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EA11BFBEF1100941789 /* Location.m */; };
+		E7BF3EA61BFBEF2100941789 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EA51BFBEF2100941789 /* Item.m */; };
+		E7BF3EA71BFBEF2100941789 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EA51BFBEF2100941789 /* Item.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7BF3E611BFBE68E00941789 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7BF3E2F1BFBE4E500941789 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7BF3E5A1BFBE68E00941789;
+			remoteInfo = "Sticker Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E7BF3E671BFBE68F00941789 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E7BF3E631BFBE68E00941789 /* Sticker Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E7BF3E371BFBE4E600941789 /* Sticker Languages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sticker Languages.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +86,28 @@
 		E7BF3E4C1BFBE4E600941789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7BF3E4F1BFBE4E600941789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7BF3E511BFBE4E600941789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7BF3E5B1BFBE68E00941789 /* Sticker Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sticker Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BF3E5D1BFBE68E00941789 /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		E7BF3E5E1BFBE68E00941789 /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		E7BF3E601BFBE68E00941789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7BF3E681BFBE7B800941789 /* Sticker Languages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sticker Languages.entitlements"; sourceTree = "<group>"; };
+		E7BF3E691BFBE8A600941789 /* Sticker Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sticker Keyboard.entitlements"; sourceTree = "<group>"; };
+		E7BF3E6B1BFBE92F00941789 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E7BF3E6C1BFBE93000941789 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E7BF3E801BFBE9CB00941789 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E7BF3E811BFBE9CB00941789 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E7BF3E821BFBE9CB00941789 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E7BF3E861BFBE9DB00941789 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E7BF3E871BFBE9DB00941789 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E7BF3E881BFBE9DB00941789 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E7BF3E8C1BFBE9E800941789 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E7BF3E8E1BFBE9FD00941789 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E7BF3E8F1BFBE9FD00941789 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E7BF3E9B1BFBEA4700941789 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E7BF3EA01BFBEF1100941789 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		E7BF3EA11BFBEF1100941789 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		E7BF3EA41BFBEF2100941789 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		E7BF3EA51BFBEF2100941789 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +115,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7BF3E9D1BFBEAB100941789 /* libsqlite3.tbd in Frameworks */,
+				E7BF3E901BFBE9FD00941789 /* libz.tbd in Frameworks */,
+				E7BF3E911BFBE9FD00941789 /* SystemConfiguration.framework in Frameworks */,
+				E7BF3E8D1BFBE9E800941789 /* CoreLocation.framework in Frameworks */,
+				E7BF3E891BFBE9DB00941789 /* QuartzCore.framework in Frameworks */,
+				E7BF3E8A1BFBE9DB00941789 /* Security.framework in Frameworks */,
+				E7BF3E8B1BFBE9DB00941789 /* StoreKit.framework in Frameworks */,
+				E7BF3E831BFBE9CB00941789 /* AudioToolbox.framework in Frameworks */,
+				E7BF3E841BFBE9CB00941789 /* CFNetwork.framework in Frameworks */,
+				E7BF3E851BFBE9CB00941789 /* CoreGraphics.framework in Frameworks */,
+				E7BF3E741BFBE93000941789 /* Parse.framework in Frameworks */,
+				E7BF3E721BFBE93000941789 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7BF3E581BFBE68E00941789 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7BF3E9C1BFBEA4700941789 /* libsqlite3.tbd in Frameworks */,
+				E7BF3E921BFBEA4600941789 /* AudioToolbox.framework in Frameworks */,
+				E7BF3E931BFBEA4700941789 /* CFNetwork.framework in Frameworks */,
+				E7BF3E941BFBEA4700941789 /* CoreGraphics.framework in Frameworks */,
+				E7BF3E951BFBEA4700941789 /* CoreLocation.framework in Frameworks */,
+				E7BF3E961BFBEA4700941789 /* libz.tbd in Frameworks */,
+				E7BF3E971BFBEA4700941789 /* QuartzCore.framework in Frameworks */,
+				E7BF3E981BFBEA4700941789 /* Security.framework in Frameworks */,
+				E7BF3E991BFBEA4700941789 /* StoreKit.framework in Frameworks */,
+				E7BF3E9A1BFBEA4700941789 /* SystemConfiguration.framework in Frameworks */,
+				E7BF3E751BFBE93000941789 /* Parse.framework in Frameworks */,
+				E7BF3E731BFBE93000941789 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				E7BF3E391BFBE4E600941789 /* Sticker Languages */,
+				E7BF3E5C1BFBE68E00941789 /* Sticker Keyboard */,
+				E7BF3E9F1BFBEEED00941789 /* Data Objects */,
+				E7BF3E6A1BFBE8FA00941789 /* External Frameworks */,
+				E7BF3E9E1BFBEAB700941789 /* Frameworks */,
 				E7BF3E381BFBE4E600941789 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				E7BF3E371BFBE4E600941789 /* Sticker Languages.app */,
+				E7BF3E5B1BFBE68E00941789 /* Sticker Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +176,7 @@
 		E7BF3E391BFBE4E600941789 /* Sticker Languages */ = {
 			isa = PBXGroup;
 			children = (
+				E7BF3E681BFBE7B800941789 /* Sticker Languages.entitlements */,
 				E7BF3E3D1BFBE4E600941789 /* AppDelegate.h */,
 				E7BF3E3E1BFBE4E600941789 /* AppDelegate.m */,
 				E7BF3E401BFBE4E600941789 /* RootViewController.h */,
@@ -89,6 +202,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E7BF3E5C1BFBE68E00941789 /* Sticker Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E7BF3E691BFBE8A600941789 /* Sticker Keyboard.entitlements */,
+				E7BF3E5D1BFBE68E00941789 /* KeyboardViewController.h */,
+				E7BF3E5E1BFBE68E00941789 /* KeyboardViewController.m */,
+				E7BF3E601BFBE68E00941789 /* Info.plist */,
+			);
+			path = "Sticker Keyboard";
+			sourceTree = "<group>";
+		};
+		E7BF3E6A1BFBE8FA00941789 /* External Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7BF3E6B1BFBE92F00941789 /* Bolts.framework */,
+				E7BF3E6C1BFBE93000941789 /* Parse.framework */,
+			);
+			name = "External Frameworks";
+			sourceTree = "<group>";
+		};
+		E7BF3E9E1BFBEAB700941789 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7BF3E9B1BFBEA4700941789 /* libsqlite3.tbd */,
+				E7BF3E8E1BFBE9FD00941789 /* libz.tbd */,
+				E7BF3E8F1BFBE9FD00941789 /* SystemConfiguration.framework */,
+				E7BF3E8C1BFBE9E800941789 /* CoreLocation.framework */,
+				E7BF3E861BFBE9DB00941789 /* QuartzCore.framework */,
+				E7BF3E871BFBE9DB00941789 /* Security.framework */,
+				E7BF3E881BFBE9DB00941789 /* StoreKit.framework */,
+				E7BF3E801BFBE9CB00941789 /* AudioToolbox.framework */,
+				E7BF3E811BFBE9CB00941789 /* CFNetwork.framework */,
+				E7BF3E821BFBE9CB00941789 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7BF3E9F1BFBEEED00941789 /* Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E7BF3EA01BFBEF1100941789 /* Location.h */,
+				E7BF3EA11BFBEF1100941789 /* Location.m */,
+				E7BF3EA41BFBEF2100941789 /* Item.h */,
+				E7BF3EA51BFBEF2100941789 /* Item.m */,
+			);
+			name = "Data Objects";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,15 +260,34 @@
 				E7BF3E331BFBE4E500941789 /* Sources */,
 				E7BF3E341BFBE4E600941789 /* Frameworks */,
 				E7BF3E351BFBE4E600941789 /* Resources */,
+				E7BF3E671BFBE68F00941789 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E7BF3E621BFBE68E00941789 /* PBXTargetDependency */,
 			);
 			name = "Sticker Languages";
 			productName = "Sticker Languages";
 			productReference = E7BF3E371BFBE4E600941789 /* Sticker Languages.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E7BF3E5A1BFBE68E00941789 /* Sticker Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7BF3E641BFBE68F00941789 /* Build configuration list for PBXNativeTarget "Sticker Keyboard" */;
+			buildPhases = (
+				E7BF3E571BFBE68E00941789 /* Sources */,
+				E7BF3E581BFBE68E00941789 /* Frameworks */,
+				E7BF3E591BFBE68E00941789 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sticker Keyboard";
+			productName = "Sticker Keyboard";
+			productReference = E7BF3E5B1BFBE68E00941789 /* Sticker Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -120,6 +300,21 @@
 				TargetAttributes = {
 					E7BF3E361BFBE4E600941789 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = V5RXZ336VT;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					E7BF3E5A1BFBE68E00941789 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = V5RXZ336VT;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -137,6 +332,7 @@
 			projectRoot = "";
 			targets = (
 				E7BF3E361BFBE4E600941789 /* Sticker Languages */,
+				E7BF3E5A1BFBE68E00941789 /* Sticker Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -152,6 +348,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7BF3E591BFBE68E00941789 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -163,11 +366,31 @@
 				E7BF3E3F1BFBE4E600941789 /* AppDelegate.m in Sources */,
 				E7BF3E481BFBE4E600941789 /* ModelController.m in Sources */,
 				E7BF3E3C1BFBE4E600941789 /* main.m in Sources */,
+				E7BF3EA21BFBEF1100941789 /* Location.m in Sources */,
+				E7BF3EA61BFBEF2100941789 /* Item.m in Sources */,
 				E7BF3E421BFBE4E600941789 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7BF3E571BFBE68E00941789 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7BF3EA71BFBEF2100941789 /* Item.m in Sources */,
+				E7BF3EA31BFBEF1100941789 /* Location.m in Sources */,
+				E7BF3E5F1BFBE68E00941789 /* KeyboardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7BF3E621BFBE68E00941789 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7BF3E5A1BFBE68E00941789 /* Sticker Keyboard */;
+			targetProxy = E7BF3E611BFBE68E00941789 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E7BF3E491BFBE4E600941789 /* Main.storyboard */ = {
@@ -273,10 +496,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Sticker Languages/Sticker Languages.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Sticker Languages/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appsovereasy.Sticker-Languages";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsovereasy.stickerlanguages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -284,10 +516,59 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Sticker Languages/Sticker Languages.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Sticker Languages/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appsovereasy.Sticker-Languages";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsovereasy.stickerlanguages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		E7BF3E651BFBE68F00941789 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Sticker Keyboard/Sticker Keyboard.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Sticker Keyboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsovereasy.stickerlanguages.stickerkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E7BF3E661BFBE68F00941789 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Sticker Keyboard/Sticker Keyboard.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Sticker Keyboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsovereasy.stickerlanguages.stickerkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -308,6 +589,14 @@
 			buildConfigurations = (
 				E7BF3E551BFBE4E600941789 /* Debug */,
 				E7BF3E561BFBE4E600941789 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E7BF3E641BFBE68F00941789 /* Build configuration list for PBXNativeTarget "Sticker Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7BF3E651BFBE68F00941789 /* Debug */,
+				E7BF3E661BFBE68F00941789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
