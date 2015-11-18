@@ -21,13 +21,23 @@
 
 @property (strong, nonatomic) NSArray<Item*>* objects;
 
--(void)getData;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
+@property (strong, nonatomic) CLLocation *coordinates;
+
+@property (strong, nonatomic) Location *location;
+
+@property (assign, nonatomic) BOOL authorized;
+
+-(void)start;
 
 @end
 
 @protocol DataManagerDelegate <NSObject>
 
 @optional
+
+-(void)failedToGetLocationForDataManager:(DataManager*)dataManager;
 
 -(void)updatedObjectsForDataManager:(DataManager*)dataManager;
 

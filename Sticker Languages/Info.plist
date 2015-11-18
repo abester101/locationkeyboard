@@ -20,6 +20,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>001</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Speakeazy needs your location to find popular stickers being used near you.</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

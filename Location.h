@@ -20,5 +20,7 @@
 
 @property (strong, nonatomic) PFGeoPoint *coordinates;
 
+@property (assign, nonatomic) CGFloat radius;
+
 
 @end
