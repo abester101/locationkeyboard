@@ -24,4 +24,8 @@
 
 @property (strong, nonatomic) PFFile *image;
 
+@property (readonly) CGFloat sortScore;
+
+-(NSString*)fileType;
+
 @end

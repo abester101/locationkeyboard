@@ -45,6 +45,13 @@
 		E7BF3EA31BFBEF1100941789 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EA11BFBEF1100941789 /* Location.m */; };
 		E7BF3EA61BFBEF2100941789 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EA51BFBEF2100941789 /* Item.m */; };
 		E7BF3EA71BFBEF2100941789 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EA51BFBEF2100941789 /* Item.m */; };
+		E7BF3EAB1BFBF11700941789 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EAA1BFBF11700941789 /* DataManager.m */; };
+		E7BF3EAC1BFBF11700941789 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EAA1BFBF11700941789 /* DataManager.m */; };
+		E7BF3EAE1BFBF1DC00941789 /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BF3EAD1BFBF1DC00941789 /* Keyboard.storyboard */; };
+		E7BF3EB11BFBF5C800941789 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EB01BFBF5C800941789 /* Reachability.m */; };
+		E7BF3EB41BFBF6B700941789 /* RepeatingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EB31BFBF6B700941789 /* RepeatingButton.m */; };
+		E7BF3EB71BFBF7CC00941789 /* StickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BF3EB61BFBF7CC00941789 /* StickerCollectionViewCell.m */; };
+		E7BF3EB91BFBFB6700941789 /* Keyboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BF3EB81BFBFB6700941789 /* Keyboard.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +115,17 @@
 		E7BF3EA11BFBEF1100941789 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		E7BF3EA41BFBEF2100941789 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		E7BF3EA51BFBEF2100941789 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		E7BF3EA81BFBF0E100941789 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E7BF3EA91BFBF11700941789 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		E7BF3EAA1BFBF11700941789 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		E7BF3EAD1BFBF1DC00941789 /* Keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
+		E7BF3EAF1BFBF5C800941789 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		E7BF3EB01BFBF5C800941789 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E7BF3EB21BFBF6B700941789 /* RepeatingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatingButton.h; sourceTree = "<group>"; };
+		E7BF3EB31BFBF6B700941789 /* RepeatingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatingButton.m; sourceTree = "<group>"; };
+		E7BF3EB51BFBF7CC00941789 /* StickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerCollectionViewCell.h; sourceTree = "<group>"; };
+		E7BF3EB61BFBF7CC00941789 /* StickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerCollectionViewCell.m; sourceTree = "<group>"; };
+		E7BF3EB81BFBFB6700941789 /* Keyboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Keyboard.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +173,7 @@
 		E7BF3E2E1BFBE4E500941789 = {
 			isa = PBXGroup;
 			children = (
+				E7BF3EA81BFBF0E100941789 /* README.md */,
 				E7BF3E391BFBE4E600941789 /* Sticker Languages */,
 				E7BF3E5C1BFBE68E00941789 /* Sticker Keyboard */,
 				E7BF3E9F1BFBEEED00941789 /* Data Objects */,
@@ -206,8 +225,16 @@
 			isa = PBXGroup;
 			children = (
 				E7BF3E691BFBE8A600941789 /* Sticker Keyboard.entitlements */,
+				E7BF3EAF1BFBF5C800941789 /* Reachability.h */,
+				E7BF3EB01BFBF5C800941789 /* Reachability.m */,
+				E7BF3EB21BFBF6B700941789 /* RepeatingButton.h */,
+				E7BF3EB31BFBF6B700941789 /* RepeatingButton.m */,
 				E7BF3E5D1BFBE68E00941789 /* KeyboardViewController.h */,
 				E7BF3E5E1BFBE68E00941789 /* KeyboardViewController.m */,
+				E7BF3EB51BFBF7CC00941789 /* StickerCollectionViewCell.h */,
+				E7BF3EB61BFBF7CC00941789 /* StickerCollectionViewCell.m */,
+				E7BF3EAD1BFBF1DC00941789 /* Keyboard.storyboard */,
+				E7BF3EB81BFBFB6700941789 /* Keyboard.xcassets */,
 				E7BF3E601BFBE68E00941789 /* Info.plist */,
 			);
 			path = "Sticker Keyboard";
@@ -242,6 +269,8 @@
 		E7BF3E9F1BFBEEED00941789 /* Data Objects */ = {
 			isa = PBXGroup;
 			children = (
+				E7BF3EA91BFBF11700941789 /* DataManager.h */,
+				E7BF3EAA1BFBF11700941789 /* DataManager.m */,
 				E7BF3EA01BFBEF1100941789 /* Location.h */,
 				E7BF3EA11BFBEF1100941789 /* Location.m */,
 				E7BF3EA41BFBEF2100941789 /* Item.h */,
@@ -352,6 +381,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7BF3EB91BFBFB6700941789 /* Keyboard.xcassets in Resources */,
+				E7BF3EAE1BFBF1DC00941789 /* Keyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +398,7 @@
 				E7BF3E481BFBE4E600941789 /* ModelController.m in Sources */,
 				E7BF3E3C1BFBE4E600941789 /* main.m in Sources */,
 				E7BF3EA21BFBEF1100941789 /* Location.m in Sources */,
+				E7BF3EAB1BFBF11700941789 /* DataManager.m in Sources */,
 				E7BF3EA61BFBEF2100941789 /* Item.m in Sources */,
 				E7BF3E421BFBE4E600941789 /* RootViewController.m in Sources */,
 			);
@@ -377,8 +409,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BF3EA71BFBEF2100941789 /* Item.m in Sources */,
+				E7BF3EAC1BFBF11700941789 /* DataManager.m in Sources */,
+				E7BF3EB71BFBF7CC00941789 /* StickerCollectionViewCell.m in Sources */,
 				E7BF3EA31BFBEF1100941789 /* Location.m in Sources */,
 				E7BF3E5F1BFBE68E00941789 /* KeyboardViewController.m in Sources */,
+				E7BF3EB11BFBF5C800941789 /* Reachability.m in Sources */,
+				E7BF3EB41BFBF6B700941789 /* RepeatingButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
