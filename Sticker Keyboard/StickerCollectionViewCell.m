@@ -21,4 +21,9 @@
     [CATransaction commit];
 }
 
+-(void) setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    self.backgroundColor = highlighted?[UIColor colorWithWhite:0.95f alpha:1.0f]:[UIColor whiteColor];
+}
+
 @end
