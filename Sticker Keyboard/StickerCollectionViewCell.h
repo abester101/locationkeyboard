@@ -10,9 +10,11 @@
 
 #import "Item.h"
 
+#import "FLAnimatedImage.h"
+
 @interface StickerCollectionViewCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet FLAnimatedImageView *imageView;
 @property (strong, nonatomic) Item *item;
 
 @end
