@@ -19,11 +19,11 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>001</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Speakeazy needs your location to find popular stickers being used near you.</string>
+	<string>002</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Speakeazy needs your location to find popular stickers being used near you.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
