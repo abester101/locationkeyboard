@@ -41,4 +41,6 @@
 
 -(void)updatedObjectsForDataManager:(DataManager*)dataManager;
 
+-(void)startedUpdatingObjectsForDataManager:(DataManager*)dataManager;
+
 @end

@@ -59,6 +59,10 @@
 
 -(void)getData{
     
+    if(self.delegate&&[self.delegate respondsToSelector:@selector(startedUpdatingObjectsForDataManager:)]){
+        [self.delegate startedUpdatingObjectsForDataManager:self];
+    }
+    
     PFGeoPoint *queryCoordinates = [PFGeoPoint geoPointWithLocation:self.coordinates];
     
     PFQuery *locationsQuery = [PFQuery queryWithClassName:@"Location"];

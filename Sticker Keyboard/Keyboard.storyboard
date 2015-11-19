@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jN6-Nf-Kof">
+                                <rect key="frame" x="290" y="130" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vub-aV-fJO">
                                 <rect key="frame" x="4" y="263" width="37" height="33"/>
                                 <animations/>
@@ -32,7 +36,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RAn-Cu-Icf">
                                 <rect key="frame" x="0.0" y="20" width="600" height="240"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Szx-mh-Rms">
                                     <size key="itemSize" width="180" height="180"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -112,6 +116,7 @@
                             <constraint firstItem="2gm-h8-PBj" firstAttribute="top" secondItem="vub-aV-fJO" secondAttribute="bottom" constant="4" id="1Tu-8Q-cq9"/>
                             <constraint firstItem="2gm-h8-PBj" firstAttribute="top" secondItem="B6g-0j-VYN" secondAttribute="bottom" constant="10" id="5jz-Bv-RtF"/>
                             <constraint firstItem="B6g-0j-VYN" firstAttribute="leading" secondItem="6Qw-PC-2aV" secondAttribute="leading" id="Ah7-JR-5KM"/>
+                            <constraint firstItem="jN6-Nf-Kof" firstAttribute="centerY" secondItem="6Qw-PC-2aV" secondAttribute="centerY" constant="-10" id="Am8-am-Rbw"/>
                             <constraint firstItem="B6g-0j-VYN" firstAttribute="top" secondItem="uex-bn-he2" secondAttribute="bottom" constant="4" id="BdJ-WT-Bld"/>
                             <constraint firstAttribute="trailing" secondItem="RAn-Cu-Icf" secondAttribute="trailing" id="DXV-rf-FRe"/>
                             <constraint firstAttribute="trailing" secondItem="Tzu-R9-84k" secondAttribute="trailing" constant="4" id="Duk-HK-0hi"/>
@@ -128,6 +133,7 @@
                             <constraint firstItem="uex-bn-he2" firstAttribute="leading" secondItem="6Qw-PC-2aV" secondAttribute="leading" id="ldx-9Y-ajy"/>
                             <constraint firstItem="RAn-Cu-Icf" firstAttribute="top" secondItem="b1l-Pg-JHW" secondAttribute="bottom" id="mL2-dw-Fv0"/>
                             <constraint firstItem="B6g-0j-VYN" firstAttribute="centerX" secondItem="6Qw-PC-2aV" secondAttribute="centerX" id="mXr-6i-ikU"/>
+                            <constraint firstItem="jN6-Nf-Kof" firstAttribute="centerX" secondItem="6Qw-PC-2aV" secondAttribute="centerX" id="mif-LA-KRy"/>
                             <constraint firstAttribute="trailing" secondItem="uex-bn-he2" secondAttribute="trailing" id="trH-aD-ZMh"/>
                             <constraint firstItem="vub-aV-fJO" firstAttribute="leading" secondItem="6Qw-PC-2aV" secondAttribute="leading" constant="4" id="x9P-aJ-l3t"/>
                         </constraints>
@@ -144,6 +150,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="300"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="jN6-Nf-Kof" id="Exm-Ox-U7l"/>
                         <outlet property="backspaceButton" destination="Tzu-R9-84k" id="wnr-gb-KJY"/>
                         <outlet property="collectionView" destination="RAn-Cu-Icf" id="2kS-90-qfe"/>
                         <outlet property="nextKeyboardButton" destination="vub-aV-fJO" id="uuX-AP-kNX"/>
