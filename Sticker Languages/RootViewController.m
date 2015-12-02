@@ -155,6 +155,7 @@
             NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
             [[UIApplication sharedApplication] openURL:url];
         [self advancePageTo:2 animated:YES];
+        [[Mixpanel sharedInstance] track:@"Tapped Open Settings"];
     } else if(contentViewController.pageIndex==2){
         [self advancePageTo:3 animated:YES];
     } else if(contentViewController.pageIndex==3){

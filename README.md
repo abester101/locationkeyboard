@@ -2,6 +2,8 @@
 
 ### Build 005
 - Added instruction pages to main app and instructional video GIF
+- Added rudimentary keyboard for cases where user hasn't enabled "Full Access"
+- Added Mixpanel tracking
 
 ### Build 004
 - Added #1, #2, #3 overlays over images

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "Mixpanel.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,10 @@
     
     [Parse setApplicationId:@"zVOnlswOvRGVWkMEqtgTizETMlGUKbldMfIQ193v"
                   clientKey:@"mvy0GBXpYDoKStql8CHIMrsblMS6mVIR8dUEqjej"];
+    
+    [Mixpanel sharedInstanceWithToken:@"4798bff90cbd582c4ed9f9e680d2bb13"];
+    [[Mixpanel sharedInstance] track:@"Launched Main App"];
+    
     
     return YES;
 }
