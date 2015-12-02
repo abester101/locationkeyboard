@@ -295,6 +295,96 @@
             </objects>
             <point key="canvasLocation" x="576" y="593"/>
         </scene>
+        <!--Welcome Page 3-->
+        <scene sceneID="1jw-7X-tYH">
+            <objects>
+                <viewController storyboardIdentifier="WelcomePage3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qVs-SO-OR7" userLabel="Welcome Page 3" customClass="ContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oTz-cX-p42"/>
+                        <viewControllerLayoutGuide type="bottom" id="vWA-vi-ch2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yNZ-bV-b3o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OF-It-HJK" userLabel="PageButton">
+                                <rect key="frame" x="0.0" y="480" width="600" height="54"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="0bt-oe-qJ8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="32"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapMainButton:" destination="Fn5-3b-oJx" eventType="touchUpInside" id="89m-GF-FYf"/>
+                                    <action selector="tapMainButton:" destination="qVs-SO-OR7" eventType="touchUpInside" id="EaN-Oj-o3b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.28715837" green="0.60461515190000004" blue="0.86239385599999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9OF-It-HJK" firstAttribute="leading" secondItem="yNZ-bV-b3o" secondAttribute="leading" id="PO4-jX-n71"/>
+                            <constraint firstAttribute="trailing" secondItem="9OF-It-HJK" secondAttribute="trailing" id="agl-kc-BrU"/>
+                            <constraint firstItem="vWA-vi-ch2" firstAttribute="top" secondItem="9OF-It-HJK" secondAttribute="bottom" constant="66" id="mrl-Bf-h0y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainButton" destination="9OF-It-HJK" id="iwH-gj-Yac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="viA-Ud-YES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253" y="593"/>
+        </scene>
+        <!--Welcome Page 4-->
+        <scene sceneID="KL0-kv-2aR">
+            <objects>
+                <viewController storyboardIdentifier="WelcomePage4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4go-OK-jC7" userLabel="Welcome Page 4" customClass="ContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cPo-BX-Rb3"/>
+                        <viewControllerLayoutGuide type="bottom" id="meQ-JI-H0z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sOg-W1-Gm1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnC-ym-w30" userLabel="PageButton">
+                                <rect key="frame" x="0.0" y="480" width="600" height="54"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="0NN-ef-F9i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="32"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapMainButton:" destination="Fn5-3b-oJx" eventType="touchUpInside" id="FjX-Cx-ewB"/>
+                                    <action selector="tapMainButton:" destination="4go-OK-jC7" eventType="touchUpInside" id="Lip-VW-1ED"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.28715837" green="0.60461515190000004" blue="0.86239385599999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="meQ-JI-H0z" firstAttribute="top" secondItem="WnC-ym-w30" secondAttribute="bottom" constant="66" id="dZK-WM-gbK"/>
+                            <constraint firstAttribute="trailing" secondItem="WnC-ym-w30" secondAttribute="trailing" id="rTe-zL-d14"/>
+                            <constraint firstItem="WnC-ym-w30" firstAttribute="leading" secondItem="sOg-W1-Gm1" secondAttribute="leading" id="z5j-pi-sfD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainButton" destination="WnC-ym-w30" id="eQ7-hE-CvD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dg-r9-jbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1933" y="593"/>
+        </scene>
     </scenes>
     <resources>
         <image name="instructions.gif" width="320" height="568"/>

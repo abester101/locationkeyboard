@@ -20,7 +20,7 @@
                                 <rect key="frame" x="290" y="130" width="20" height="20"/>
                                 <animations/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vub-aV-fJO">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vub-aV-fJO">
                                 <rect key="frame" x="4" y="263" width="37" height="33"/>
                                 <animations/>
                                 <state key="normal" image="backbutton"/>
@@ -122,7 +122,7 @@
                                     <outletCollection property="gestureRecognizers" destination="o6i-CR-edA" appends="YES" id="myD-lg-AvT"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please &quot;Allow Full Access&quot; to see stickers." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6g-0j-VYN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please &quot;Allow Full Access&quot; to see stickers." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6g-0j-VYN">
                                 <rect key="frame" x="141" y="264" width="319" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>

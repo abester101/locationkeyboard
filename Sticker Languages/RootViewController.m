@@ -109,11 +109,11 @@
         vc.imageView.animationRepeatCount = 10;
         vc.delegate = self;
     } else if(index==2) {
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomePage1"];
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomePage3"];
         vc.pageIndex = 2;
         vc.delegate = self;
     } else if(index==3) {
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomePage1"];
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomePage4"];
         vc.pageIndex = 3;
         vc.delegate = self;
     }
