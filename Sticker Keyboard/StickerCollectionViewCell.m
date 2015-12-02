@@ -15,6 +15,9 @@
     [super prepareForReuse];
     self.item = nil;
     
+    self.numberImageView.hidden = YES;
+    self.numberLabel.hidden = YES;
+    
     [CATransaction begin];
     [self.imageView.layer removeAllAnimations];
     self.imageView.image = nil;

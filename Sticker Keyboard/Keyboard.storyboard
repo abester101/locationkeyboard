@@ -55,6 +55,21 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                     <animations/>
                                                 </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="speakeazy_number" translatesAutoresizingMaskIntoConstraints="NO" id="hv0-XI-tFh">
+                                                    <rect key="frame" x="0.0" y="132" width="48" height="48"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="48" id="Lzj-cs-eay"/>
+                                                        <constraint firstAttribute="height" constant="48" id="bYJ-fH-0iT"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIX-NN-lhM">
+                                                    <rect key="frame" x="20" y="135" width="7" height="23"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -62,6 +77,10 @@
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="HIX-NN-lhM" firstAttribute="centerX" secondItem="hv0-XI-tFh" secondAttribute="centerX" constant="-1" id="6fl-FW-JnR"/>
+                                            <constraint firstAttribute="bottom" secondItem="hv0-XI-tFh" secondAttribute="bottom" id="MEi-Z0-5ln"/>
+                                            <constraint firstItem="hv0-XI-tFh" firstAttribute="leading" secondItem="OJI-sk-JEU" secondAttribute="leading" id="TQr-MH-pua"/>
+                                            <constraint firstItem="HIX-NN-lhM" firstAttribute="top" secondItem="hv0-XI-tFh" secondAttribute="top" constant="3" id="WXv-bN-VUi"/>
                                             <constraint firstItem="nlN-mZ-ZQt" firstAttribute="leading" secondItem="OJI-sk-JEU" secondAttribute="leading" id="gw5-Wf-dWb"/>
                                             <constraint firstAttribute="trailing" secondItem="nlN-mZ-ZQt" secondAttribute="trailing" id="lHT-0g-AYP"/>
                                             <constraint firstItem="nlN-mZ-ZQt" firstAttribute="top" secondItem="OJI-sk-JEU" secondAttribute="top" id="pdH-b7-8w9"/>
@@ -69,6 +88,8 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="nlN-mZ-ZQt" id="Dgt-z7-hJq"/>
+                                            <outlet property="numberImageView" destination="hv0-XI-tFh" id="hVg-tK-xAI"/>
+                                            <outlet property="numberLabel" destination="HIX-NN-lhM" id="Tpw-9Q-e4j"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -171,5 +192,6 @@
     <resources>
         <image name="backbutton" width="37" height="33"/>
         <image name="backspace" width="46" height="26"/>
+        <image name="speakeazy_number" width="256" height="256"/>
     </resources>
 </document>

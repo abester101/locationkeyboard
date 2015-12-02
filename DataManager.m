@@ -14,6 +14,8 @@
 
 @property (assign, nonatomic) BOOL started;
 
+@property (strong, nonatomic) NSDate *lastQueryDate;
+
 @end
 
 @implementation DataManager
@@ -59,6 +61,10 @@
 
 -(void)getData{
     
+    if(self.lastQueryDate&&[[NSDate date] timeIntervalSinceDate:self.lastQueryDate]<1*60.0f){
+        return; // Queried less than a minute ago, so don't do it now.
+    }
+    
     if(self.delegate&&[self.delegate respondsToSelector:@selector(startedUpdatingObjectsForDataManager:)]){
         [self.delegate startedUpdatingObjectsForDataManager:self];
     }
@@ -97,7 +103,7 @@
         
     }];
     
-    
+    self.lastQueryDate = [NSDate date];
     
 }
 

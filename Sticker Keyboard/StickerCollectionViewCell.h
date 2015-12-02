@@ -16,5 +16,7 @@
 
 @property (strong, nonatomic) IBOutlet FLAnimatedImageView *imageView;
 @property (strong, nonatomic) Item *item;
+@property (strong, nonatomic) IBOutlet UIImageView *numberImageView;
+@property (strong, nonatomic) IBOutlet UILabel *numberLabel;
 
 @end
