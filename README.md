@@ -1,6 +1,7 @@
 # Release Notes
 
 ### Build 006
+- Added location permission request to main app's onboarding walkthrough
 - Changed settings link to try to deep-link to Keyboard Settings
 - Updated instructional GIF
 
