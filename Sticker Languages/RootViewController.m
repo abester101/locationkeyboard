@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "ContentViewController.h"
+#import "Mixpanel.h"
 
 @interface RootViewController () <UIPageViewControllerDelegate,UIPageViewControllerDataSource,ContentViewControllerDelegate>
 
@@ -152,8 +153,13 @@
     if(contentViewController.pageIndex==0){
         [self advancePageTo:1 animated:YES];
     } else if(contentViewController.pageIndex==1){
-            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"prefs:"]]){
+            
+            NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard"];
             [[UIApplication sharedApplication] openURL:url];
+        } else {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+        }
         [self advancePageTo:2 animated:YES];
         [[Mixpanel sharedInstance] track:@"Tapped Open Settings"];
     } else if(contentViewController.pageIndex==2){
