@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HorizontalPagingCollectionViewLayout : UICollectionViewLayout
+@interface HorizontalPagingCollectionViewLayout : UICollectionViewFlowLayout
 
 @property (nonatomic, assign) CGSize itemSize;
 

@@ -2,6 +2,7 @@
 
 ### Build 006
 - Added location permission request to main app's onboarding walkthrough
+- Changed keyboard grid to a three-row layout with smaller cells
 - Changed settings link to try to deep-link to Keyboard Settings
 - Updated instructional GIF
 

@@ -94,6 +94,13 @@
                 
                 NSArray *sortedArray = [objects sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"sortScore" ascending:NO]]];
                 
+//                NSMutableArray *obj = [NSMutableArray array];
+//                for(NSInteger idx = 0;idx<12;idx++){
+//                    for(PFObject *object in sortedArray){
+//                        [obj addObject:object];
+//                    }
+//                }
+                
                 self.objects = sortedArray;
             }];
             

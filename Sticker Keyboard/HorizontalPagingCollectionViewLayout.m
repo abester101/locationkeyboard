@@ -9,104 +9,78 @@
 #import "HorizontalPagingCollectionViewLayout.h"
 
 @implementation HorizontalPagingCollectionViewLayout
-{
-    NSInteger _cellCount;
-    CGSize _boundsSize;
-}
-
-- (void)prepareLayout
-{
-    // Get the number of cells and the bounds size
-    _cellCount = [self.collectionView numberOfItemsInSection:0];
-    _boundsSize = self.collectionView.bounds.size;
-}
-
 - (CGSize)collectionViewContentSize
 {
-    // We should return the content size. Lets do some math:
+    // Only support single section for now.
+    // Only support Horizontal scroll
+    NSUInteger count = [self.collectionView.dataSource collectionView:self.collectionView
+                                               numberOfItemsInSection:0];
     
-    NSInteger verticalItemsCount = (NSInteger)floorf(_boundsSize.height / _itemSize.height);
-    NSInteger horizontalItemsCount = (NSInteger)floorf(_boundsSize.width / _itemSize.width);
+    CGSize canvasSize = self.collectionView.frame.size;
+    CGSize contentSize = canvasSize;
+    if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal)
+    {
+        NSUInteger rowCount = (canvasSize.height - self.itemSize.height) / (self.itemSize.height + self.minimumInteritemSpacing) + 1;
+        NSUInteger columnCount = (canvasSize.width - self.itemSize.width) / (self.itemSize.width + self.minimumLineSpacing) + 1;
+        NSUInteger page = ceilf((CGFloat)count / (CGFloat)(rowCount * columnCount));
+        contentSize.width = page * canvasSize.width;
+    }
     
-    NSInteger itemsPerPage = verticalItemsCount * horizontalItemsCount;
-    NSInteger numberOfItems = _cellCount;
-    NSInteger numberOfPages = (NSInteger)ceilf((CGFloat)numberOfItems / (CGFloat)itemsPerPage);
+    return contentSize;
+}
+
+
+- (CGRect)frameForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize canvasSize = self.collectionView.frame.size;
     
-    CGSize size = _boundsSize;
-    size.width = numberOfPages * _boundsSize.width;
-    return size;
+    NSUInteger rowCount = (canvasSize.height - self.itemSize.height) / (self.itemSize.height + self.minimumInteritemSpacing) + 1;
+    NSUInteger columnCount = (canvasSize.width - self.itemSize.width) / (self.itemSize.width + self.minimumLineSpacing) + 1;
+    
+    CGFloat pageMarginX = (canvasSize.width - columnCount * self.itemSize.width - (columnCount > 1 ? (columnCount - 1) * self.minimumLineSpacing : 0)) / 2.0f;
+    CGFloat pageMarginY = (canvasSize.height - rowCount * self.itemSize.height - (rowCount > 1 ? (rowCount - 1) * self.minimumInteritemSpacing : 0)) / 2.0f;
+    
+    NSUInteger page = indexPath.row / (rowCount * columnCount);
+    NSUInteger remainder = indexPath.row - page * (rowCount * columnCount);
+    NSUInteger row = remainder / columnCount;
+    NSUInteger column = remainder - row * columnCount;
+    
+    CGRect cellFrame = CGRectZero;
+    cellFrame.origin.x = pageMarginX + column * (self.itemSize.width + self.minimumLineSpacing);
+    cellFrame.origin.y = pageMarginY + row * (self.itemSize.height + self.minimumInteritemSpacing);
+    cellFrame.size.width = self.itemSize.width;
+    cellFrame.size.height = self.itemSize.height;
+    
+    if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal)
+    {
+        cellFrame.origin.x += page * canvasSize.width;
+    }
+    
+    return cellFrame;
+}
+
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewLayoutAttributes * attr = [super layoutAttributesForItemAtIndexPath:indexPath];
+    attr.frame = [self frameForItemAtIndexPath:indexPath];
+    return attr;
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
-    // This method requires to return the attributes of those cells that intsersect with the given rect.
-    // In this implementation we just return all the attributes.
-    // In a better implementation we could compute only those attributes that intersect with the given rect.
+    NSArray * originAttrs = [super layoutAttributesForElementsInRect:rect];
+    NSMutableArray * attrs = [NSMutableArray array];
     
-    NSMutableArray *allAttributes = [NSMutableArray arrayWithCapacity:_cellCount];
+    [originAttrs enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * attr, NSUInteger idx, BOOL *stop) {
+        NSIndexPath * idxPath = attr.indexPath;
+        CGRect itemFrame = [self frameForItemAtIndexPath:idxPath];
+        if (CGRectIntersectsRect(itemFrame, rect))
+        {
+            attr = [self layoutAttributesForItemAtIndexPath:idxPath];
+            [attrs addObject:attr];
+        }
+    }];
     
-    for (NSUInteger i=0; i<_cellCount; ++i)
-    {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-        UICollectionViewLayoutAttributes *attr = [self _layoutForAttributesForCellAtIndexPath:indexPath];
-        
-        [allAttributes addObject:attr];
-    }
-    
-    return allAttributes;
+    return attrs;
 }
-
-- (UICollectionViewLayoutAttributes*)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return [self _layoutForAttributesForCellAtIndexPath:indexPath];
-}
-
-- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
-{
-    // We should do some math here, but we are lazy.
-    return YES;
-}
-
-- (UICollectionViewLayoutAttributes*)_layoutForAttributesForCellAtIndexPath:(NSIndexPath*)indexPath
-{
-    // Here we have the magic of the layout.
-    
-    NSInteger row = indexPath.row;
-    
-    CGRect bounds = self.collectionView.bounds;
-    CGSize itemSize = self.itemSize;
-    
-    // Get some info:
-    NSInteger verticalItemsCount = (NSInteger)floorf(bounds.size.height / itemSize.height);
-    NSInteger horizontalItemsCount = (NSInteger)floorf(bounds.size.width / itemSize.width);
-    NSInteger itemsPerPage = verticalItemsCount * horizontalItemsCount;
-    
-    // Compute the column & row position, as well as the page of the cell.
-    NSInteger columnPosition = row%horizontalItemsCount;
-    NSInteger rowPosition = (row/horizontalItemsCount)%verticalItemsCount;
-    NSInteger itemPage = floorf(row/itemsPerPage);
-    
-    // Creating an empty attribute
-    UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    
-    CGRect frame = CGRectZero;
-    
-    // And finally, we assign the positions of the cells
-    frame.origin.x = itemPage * bounds.size.width + columnPosition * itemSize.width;
-    frame.origin.y = rowPosition * itemSize.height;
-    frame.size = _itemSize;
-    
-    attr.frame = frame;
-    
-    return attr;
-}
-
-#pragma mark Properties
-
-- (void)setItemSize:(CGSize)itemSize
-{
-    _itemSize = itemSize;
-    [self invalidateLayout];
-}
-
 @end
