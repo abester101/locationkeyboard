@@ -31,6 +31,8 @@
 
 -(void)start;
 
+-(void)getAuthorization:(void(^)(BOOL success))completionBlock;
+
 @end
 
 @protocol DataManagerDelegate <NSObject>

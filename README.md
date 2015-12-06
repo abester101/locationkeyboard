@@ -1,5 +1,9 @@
 # Release Notes
 
+### Build 006
+- Changed settings link to try to deep-link to Keyboard Settings
+- Updated instructional GIF
+
 ### Build 005
 - Added instruction pages to main app and instructional video GIF
 - Added rudimentary keyboard for cases where user hasn't enabled "Full Access"

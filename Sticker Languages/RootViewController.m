@@ -10,7 +10,10 @@
 #import "ContentViewController.h"
 #import "Mixpanel.h"
 
-@interface RootViewController () <UIPageViewControllerDelegate,UIPageViewControllerDataSource,ContentViewControllerDelegate>
+#import "DataManager.h"
+
+
+@interface RootViewController () <UIPageViewControllerDelegate,UIPageViewControllerDataSource,ContentViewControllerDelegate,CLLocationManagerDelegate>
 
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
@@ -22,6 +25,8 @@
 @property (strong, nonatomic) IBOutlet UIView *pageIndicator2;
 @property (strong, nonatomic) IBOutlet UIView *pageIndicator3;
 @property (strong, nonatomic) IBOutlet UIView *pageIndicator4;
+
+@property (strong, nonatomic) DataManager *dataManager;
 
 
 @end
@@ -163,9 +168,19 @@
         [self advancePageTo:2 animated:YES];
         [[Mixpanel sharedInstance] track:@"Tapped Open Settings"];
     } else if(contentViewController.pageIndex==2){
-        [self advancePageTo:3 animated:YES];
+        [self.dataManager getAuthorization:^(BOOL success) {
+            [self advancePageTo:3 animated:YES];
+        }];
+        
     } else if(contentViewController.pageIndex==3){
         //[self advancePageTo:1 animated:YES];
     }
+}
+
+-(DataManager *)dataManager{
+    if(!_dataManager){
+        _dataManager = [[DataManager alloc] init];
+    }
+    return _dataManager;
 }
 @end
