@@ -31,6 +31,8 @@
 
 -(void)start;
 
+-(void)fetchData;
+
 -(void)getAuthorization:(void(^)(BOOL success))completionBlock;
 
 @end
@@ -38,6 +40,8 @@
 @protocol DataManagerDelegate <NSObject>
 
 @optional
+
+-(void)gotLocation:(Location*)location dataManager:(DataManager*)dataManager;
 
 -(void)failedToGetLocationForDataManager:(DataManager*)dataManager;
 

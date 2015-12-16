@@ -49,7 +49,7 @@
 
 -(void)setCoordinates:(CLLocation *)coordinates{
     _coordinates = coordinates;
-    [self getData];
+    [self getLocation];
 }
 
 -(void)setObjects:(NSArray<Item *> *)objects{
@@ -59,15 +59,7 @@
     }
 }
 
--(void)getData{
-    
-    if(self.lastQueryDate&&[[NSDate date] timeIntervalSinceDate:self.lastQueryDate]<1*60.0f){
-        return; // Queried less than a minute ago, so don't do it now.
-    }
-    
-    if(self.delegate&&[self.delegate respondsToSelector:@selector(startedUpdatingObjectsForDataManager:)]){
-        [self.delegate startedUpdatingObjectsForDataManager:self];
-    }
+-(void)getLocation{
     
     PFGeoPoint *queryCoordinates = [PFGeoPoint geoPointWithLocation:self.coordinates];
     
@@ -75,7 +67,7 @@
     [locationsQuery whereKey:@"coordinates" nearGeoPoint:queryCoordinates];
     
     [locationsQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-       
+        
         Location *foundLocation = nil;
         for(Location *location in objects){
             
@@ -85,30 +77,47 @@
             }
             
         }
-        if(foundLocation){
-            
-            PFQuery *objectQuery = [PFQuery queryWithClassName:@"Item"];
-            [objectQuery whereKey:@"location" equalTo:foundLocation];
-            [objectQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-                
-                
-                NSArray *sortedArray = [objects sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"sortScore" ascending:NO]]];
-                
-//                NSMutableArray *obj = [NSMutableArray array];
-//                for(NSInteger idx = 0;idx<12;idx++){
-//                    for(PFObject *object in sortedArray){
-//                        [obj addObject:object];
-//                    }
-//                }
-                
-                self.objects = sortedArray;
-            }];
-            
-        } else {
-            self.objects = nil;
+        self.location = foundLocation;
+        
+        if(self.delegate&&[self.delegate respondsToSelector:@selector(gotLocation:dataManager:)]){
+            [self.delegate gotLocation:foundLocation dataManager:self];
         }
         
     }];
+    
+}
+
+-(void)fetchData{
+    
+    if(self.lastQueryDate&&[[NSDate date] timeIntervalSinceDate:self.lastQueryDate]<1*60.0f){
+        return; // Queried less than a minute ago, so don't do it now.
+    }
+    
+    if(self.delegate&&[self.delegate respondsToSelector:@selector(startedUpdatingObjectsForDataManager:)]){
+        [self.delegate startedUpdatingObjectsForDataManager:self];
+    }
+    
+    if(self.location){
+        
+        
+        PFQuery *objectQuery = [PFQuery queryWithClassName:@"Item"];
+        [objectQuery whereKey:@"location" equalTo:self.location];
+        [objectQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+            
+            
+            NSArray *sortedArray = [objects sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"sortScore" ascending:NO]]];
+            
+            //                NSMutableArray *obj = [NSMutableArray array];
+            //                for(NSInteger idx = 0;idx<12;idx++){
+            //                    for(PFObject *object in sortedArray){
+            //                        [obj addObject:object];
+            //                    }
+            //                }
+            
+            self.objects = sortedArray;
+        }];
+        
+    }
     
     self.lastQueryDate = [NSDate date];
     
@@ -166,7 +175,7 @@
     } else {
         if(self.authorizationCompletionBlock){
             self.authorizationCompletionBlock(NO);
-            self.authorizationCompletionBlock = nil;
+            //self.authorizationCompletionBlock = nil;
         }
     }
 }

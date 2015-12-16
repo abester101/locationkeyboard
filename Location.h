@@ -16,7 +16,7 @@
 +(NSString*)parseClassName;
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) NSString *locationDescription;
 
 @property (strong, nonatomic) PFGeoPoint *coordinates;
 

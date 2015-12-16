@@ -10,7 +10,7 @@
 
 @implementation Location
 
-@dynamic name,description,coordinates,radius;
+@dynamic name,locationDescription,coordinates,radius;
 
 +(void)load{
     [self registerSubclass];

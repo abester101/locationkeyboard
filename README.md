@@ -1,5 +1,13 @@
 # Release Notes
 
+### Build 007
+- Changed arrangement of intro screens
+- Changed fonts on intro screens to system font
+- Changed intro screen instructional video
+- Intro screen will auto-detect keyboard installation
+- Disable swiping between intro screens
+- Dropped deployment target down to iOS 8.0
+
 ### Build 006
 - Added location permission request to main app's onboarding walkthrough
 - Changed keyboard grid to a three-row layout with smaller cells

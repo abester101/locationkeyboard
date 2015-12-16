@@ -210,6 +210,10 @@
     //[self.textDocumentProxy insertText:[_symbols objectAtIndex:tag]];
 }
 
+-(void)gotLocation:(Location *)location dataManager:(DataManager *)dataManager{
+    [dataManager fetchData];
+}
+
 -(void)startedUpdatingObjectsForDataManager:(DataManager *)dataManager{
     [self.activityIndicatorView startAnimating];
 }
