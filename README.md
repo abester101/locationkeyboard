@@ -1,10 +1,27 @@
 # Release Notes
 
+
+### Build 010
+- Added stronger caching behavior
+- Changed keyboard background color
+- Changed image collection view to have 4 rows
+- Increased height of keyboard
+- Added borders to main app buttons
+- Tweaked text of main app
+- Added "how to switch to keyboard" instructional image to main app
+
+### Build 009
+- Advanced build number to keep TestFlight active
+
+### Build 008
+- Recompile to reupload to get around TestFlight problem
+
 ### Build 007
 - Changed arrangement of intro screens
 - Changed fonts on intro screens to system font
 - Changed intro screen instructional video
 - Intro screen will auto-detect keyboard installation
+- Intro will detect nearest Speakeazy location after location permissions are granted
 - Disable swiping between intro screens
 - Dropped deployment target down to iOS 8.0
 

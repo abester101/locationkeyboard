@@ -29,6 +29,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *nextKeyboardButton;
 @property (strong, nonatomic) IBOutlet RepeatingButton *backspaceButton;
 
+@property (strong, nonatomic) NSLayoutConstraint *heightConstraint;
+
 @property (strong, nonatomic) IBOutlet UIView *shareInstructionView;
 @property (strong, nonatomic) NSTimer *shareInstructionTimer;
 
@@ -78,6 +80,9 @@
     self.searchKeyboardView.hidden = YES;
     self.searchKeyboardView.delegate = self;
     [self.view addSubview:self.searchKeyboardView];
+    
+//    self.heightConstraint = [NSLayoutConstraint constraintWithItem:self.inputView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:270];
+//    [self.inputView addConstraint:self.heightConstraint];
     
     [self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:self.searchKeyboardView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0],
                                 [NSLayoutConstraint constraintWithItem:self.searchKeyboardView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0],
@@ -165,11 +170,45 @@
     // Dispose of any resources that can be recreated
 }
 
+-(BOOL)isInLandscapeMode{
+    return [UIScreen mainScreen].bounds.size.width>[UIScreen mainScreen].bounds.size.height;
+        
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    CGFloat kbHeight = 270;
+    if([self isInLandscapeMode]){
+        kbHeight = 180;
+    }
+    self.heightConstraint = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:kbHeight];
+    [self.view addConstraint:self.heightConstraint];
+}
+
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
     //self.collectionView.pagingEnabled = YES;
     
+    if(self.heightConstraint){
+        if([self isInLandscapeMode]){
+            self.heightConstraint.constant = 180;
+        } else {
+            self.heightConstraint.constant = 270;
+        }
+    }
+    
+    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
+    if([self isInLandscapeMode]){
+        flowLayout.sectionInset = UIEdgeInsetsMake(4, 4, 2, 4);
+        flowLayout.minimumInteritemSpacing = 3;
+        flowLayout.minimumLineSpacing = 3;
+    } else {
+        
+        flowLayout.sectionInset = UIEdgeInsetsMake(8, 8, 4, 8);
+        flowLayout.minimumInteritemSpacing = 4;
+        flowLayout.minimumLineSpacing = 6;
+    }
     
     [self.collectionView performBatchUpdates:^{
         
@@ -205,8 +244,8 @@
 }
 
 - (void)insertSymbol:(id)sender {
-    UIButton *button = (UIButton *)sender;
-    int tag = (int)button.tag;
+    //UIButton *button = (UIButton *)sender;
+    //int tag = (int)button.tag;
     //[self.textDocumentProxy insertText:[_symbols objectAtIndex:tag]];
 }
 
@@ -274,28 +313,16 @@
         
         PFFile *imageFile = item.image;
         if(imageFile) {
-            
+            if(imageFile.isDataAvailable){
+                [self loadImage:imageFile intoCell:cell];
+            } else {
             [imageFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+                NSLog(@"Downloaded image");
                 if (!error&&cell.item==item) {
-                    if([imageFile.name.pathExtension.uppercaseString isEqualToString:@"GIF"]){
-                        FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:data];
-                        [UIView transitionWithView:cell.imageView duration:0.1f options:UIViewAnimationOptionTransitionCrossDissolve | UIViewAnimationOptionAllowAnimatedContent animations:^{
-                            [cell.imageView setAnimatedImage:image];
-                        } completion:^(BOOL finished) {
-                            
-                        }];
-                    } else {
-                        UIImage *image = [UIImage imageWithData:data];
-                        
-                        [UIView transitionWithView:cell.imageView duration:0.1f options:UIViewAnimationOptionTransitionCrossDissolve | UIViewAnimationOptionAllowAnimatedContent animations:^{
-                            [cell.imageView setImage:image];
-                        } completion:^(BOOL finished) {
-                            
-                        }];
-                    }
+                    [self loadImage:imageFile intoCell:cell];
                 }
             }];
-            
+            }
             
             
             
@@ -309,6 +336,34 @@
             cell.numberLabel.hidden = YES;
 //        }
     }
+    
+}
+
+-(void)loadImage:(PFFile*)imageFile intoCell:(StickerCollectionViewCell*)cell{
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void) {
+        NSData *data = imageFile.getData;
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            if([imageFile.name.pathExtension.uppercaseString isEqualToString:@"GIF"]){
+                FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:data];
+                [UIView transitionWithView:cell.imageView duration:0.05f options:UIViewAnimationOptionTransitionCrossDissolve | UIViewAnimationOptionAllowAnimatedContent animations:^{
+                    [cell.imageView setAnimatedImage:image];
+                } completion:^(BOOL finished) {
+                    
+                }];
+            } else {
+                UIImage *image = [UIImage imageWithData:data];
+                
+                [UIView transitionWithView:cell.imageView duration:0.05f options:UIViewAnimationOptionTransitionCrossDissolve | UIViewAnimationOptionAllowAnimatedContent animations:^{
+                    [cell.imageView setImage:image];
+                } completion:^(BOOL finished) {
+                    
+                }];
+            }
+        });
+    });
+    
     
 }
 
@@ -369,7 +424,7 @@
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout*)collectionViewLayout;
     
-    CGFloat height = (collectionView.frame.size.height - flowLayout.sectionInset.top - flowLayout.sectionInset.bottom - flowLayout.minimumLineSpacing*2) / 3;
+    CGFloat height = (collectionView.frame.size.height - flowLayout.sectionInset.top - flowLayout.sectionInset.bottom - flowLayout.minimumLineSpacing*3) / 4;
     
     return CGSizeMake(height,height);
 }

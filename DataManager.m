@@ -61,6 +61,33 @@
 
 -(void)getLocation{
     
+    if([[[NSUserDefaults standardUserDefaults] objectForKey:@"LastLocationObjectId"] length]){
+        // Check to see if we're still within the radius of the last location
+        
+        CLLocation *lastLocation = [[CLLocation alloc] initWithLatitude:[[NSUserDefaults standardUserDefaults] floatForKey:@"LastLocationLatitude"] longitude:[[NSUserDefaults standardUserDefaults] floatForKey:@"LastLocationLongitude"]];
+        CGFloat radius = [[NSUserDefaults standardUserDefaults] floatForKey:@"LastLocationRadius"];
+        
+        if(radius>0 && [lastLocation distanceFromLocation:self.coordinates]<=radius){
+            
+            // We're here!
+            
+            Location *foundLocation = [Location objectWithoutDataWithObjectId:[[NSUserDefaults standardUserDefaults] objectForKey:@"LastLocationObjectId"]];
+            _location = foundLocation;
+            
+            if(self.delegate&&[self.delegate respondsToSelector:@selector(gotLocation:dataManager:)]){
+                [self.delegate gotLocation:foundLocation dataManager:self];
+            }
+            
+            NSLog(@"Found cached location");
+            
+            [_location fetchIfNeededInBackground];
+            
+            return;
+            
+        }
+        
+    }
+    
     PFGeoPoint *queryCoordinates = [PFGeoPoint geoPointWithLocation:self.coordinates];
     
     PFQuery *locationsQuery = [PFQuery queryWithClassName:@"Location"];
@@ -87,6 +114,17 @@
     
 }
 
+-(void)setLocation:(Location *)location{
+    _location = location;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:location.objectId forKey:@"LastLocationObjectId"];
+    [[NSUserDefaults standardUserDefaults] setObject:@(location.coordinates.latitude) forKey:@"LastLocationLatitude"];
+    [[NSUserDefaults standardUserDefaults] setObject:@(location.coordinates.longitude) forKey:@"LastLocationLongitude"];
+    [[NSUserDefaults standardUserDefaults] setObject:@(location.radius) forKey:@"LastLocationRadius"];
+    
+    
+}
+
 -(void)fetchData{
     
     if(self.lastQueryDate&&[[NSDate date] timeIntervalSinceDate:self.lastQueryDate]<1*60.0f){
@@ -102,6 +140,7 @@
         
         PFQuery *objectQuery = [PFQuery queryWithClassName:@"Item"];
         [objectQuery whereKey:@"location" equalTo:self.location];
+        [objectQuery setCachePolicy:kPFCachePolicyCacheThenNetwork];
         [objectQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
             
             
@@ -114,13 +153,33 @@
             //                    }
             //                }
             
-            self.objects = sortedArray;
+//            NSMutableArray *testArray = [NSMutableArray array];
+//            for(int ix = 0;ix<40;ix++){
+//                [testArray addObjectsFromArray:sortedArray];
+//            }
+            
+            
+            if(![self array:self.objects matchesArray:sortedArray]){
+                self.objects = sortedArray;
+            }
         }];
         
     }
     
     self.lastQueryDate = [NSDate date];
     
+}
+
+-(BOOL)array:(NSArray<PFObject*>*)array matchesArray:(NSArray<PFObject*>*)otherArray{
+    if(array.count!=otherArray.count){
+        return NO;
+    }
+    for(NSInteger ix=0;ix<array.count;ix++){
+        if(![array[ix].objectId isEqualToString:otherArray[ix].objectId]){
+            return NO;
+        }
+    }
+    return YES;
 }
 
 -(void)getAuthorization:(void(^)(BOOL success))completionBlock{

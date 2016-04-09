@@ -18,6 +18,8 @@
     self.numberImageView.hidden = YES;
     self.numberLabel.hidden = YES;
     
+    self.backgroundColor = [UIColor clearColor];
+    
     [CATransaction begin];
     [self.imageView.layer removeAllAnimations];
     self.imageView.image = nil;
@@ -26,7 +28,7 @@
 
 -(void) setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
-    self.backgroundColor = highlighted?[UIColor colorWithWhite:0.95f alpha:1.0f]:[UIColor whiteColor];
+    self.backgroundColor = highlighted?[UIColor colorWithWhite:0.95f alpha:1.0f]:[UIColor clearColor];
 }
 
 @end

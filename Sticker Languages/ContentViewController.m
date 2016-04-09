@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.mainButton.layer.borderColor = [UIColor blackColor].CGColor;
+    
     if(self.movieFileName){
         [self setMovieFile:_movieFileName];
     }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9060"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10116"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,7 +13,6 @@
             <subviews>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="awg-8k-fga" customClass="KeyButton">
                     <rect key="frame" x="8" y="8" width="38" height="58"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Q"/>
@@ -29,7 +29,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-PT-2EM" customClass="KeyButton">
                     <rect key="frame" x="52" y="8" width="39" height="59"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="W"/>
@@ -46,7 +45,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hd1-w0-Ihd" customClass="KeyButton">
                     <rect key="frame" x="97" y="8" width="38" height="59"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="E"/>
@@ -63,7 +61,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bh3-Nn-sLF" customClass="KeyButton">
                     <rect key="frame" x="141" y="8" width="38" height="59"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="R"/>
@@ -80,7 +77,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PI7-qh-scJ" customClass="KeyButton">
                     <rect key="frame" x="185" y="8" width="39" height="59"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="T"/>
@@ -97,7 +93,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qg5-fg-01A" customClass="KeyButton">
                     <rect key="frame" x="230" y="8" width="38" height="58"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Y"/>
@@ -114,7 +109,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-8F-AIo" customClass="KeyButton">
                     <rect key="frame" x="274" y="8" width="39" height="59"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="U"/>
@@ -131,7 +125,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6b-81-kca" customClass="KeyButton">
                     <rect key="frame" x="318" y="8" width="38" height="59"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="I"/>
@@ -148,7 +141,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDD-Ty-1jk" customClass="KeyButton">
                     <rect key="frame" x="362" y="8" width="38" height="59"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="O"/>
@@ -165,7 +157,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fjQ-VF-M6y" customClass="KeyButton">
                     <rect key="frame" x="406" y="8" width="38" height="58"/>
-                    <animations/>
                     <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="P"/>
@@ -185,7 +176,6 @@
                     <subviews>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cg-OV-mgq" customClass="KeyButton">
                             <rect key="frame" x="0.0" y="0.0" width="38" height="57"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="A"/>
@@ -202,7 +192,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfZ-vt-hWL" customClass="KeyButton">
                             <rect key="frame" x="44" y="0.0" width="38" height="57"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="S"/>
@@ -219,7 +208,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6oh-Mh-Los" customClass="KeyButton">
                             <rect key="frame" x="88" y="0.0" width="38" height="57"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="D"/>
@@ -236,7 +224,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-Th-uQj" customClass="KeyButton">
                             <rect key="frame" x="131" y="0.0" width="38" height="57"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="F"/>
@@ -253,7 +240,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulJ-b2-ziU" customClass="KeyButton">
                             <rect key="frame" x="175" y="0.0" width="38" height="57"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="G"/>
@@ -270,7 +256,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="84E-42-EFQ" customClass="KeyButton">
                             <rect key="frame" x="219" y="0.0" width="38" height="57"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="H"/>
@@ -287,7 +272,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zbp-J6-jX2" customClass="KeyButton">
                             <rect key="frame" x="263" y="0.0" width="38" height="57"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="J"/>
@@ -304,7 +288,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3f-DK-emF" customClass="KeyButton">
                             <rect key="frame" x="307" y="0.0" width="38" height="57"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="K"/>
@@ -321,7 +304,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08I-94-yAJ" customClass="KeyButton">
                             <rect key="frame" x="351" y="0.0" width="38" height="57"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="L"/>
@@ -337,7 +319,6 @@
                             </connections>
                         </view>
                     </subviews>
-                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="ulJ-b2-ziU" firstAttribute="height" secondItem="9cg-OV-mgq" secondAttribute="height" id="2JK-Eg-s1G"/>
@@ -391,7 +372,6 @@
                     <subviews>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L2i-jo-gqh" customClass="KeyButton">
                             <rect key="frame" x="0.0" y="0.0" width="39" height="58"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Z"/>
@@ -408,7 +388,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ko-5y-hpf" customClass="KeyButton">
                             <rect key="frame" x="44" y="0.0" width="39" height="58"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="X"/>
@@ -425,7 +404,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CG-Na-I1B" customClass="KeyButton">
                             <rect key="frame" x="88" y="0.0" width="38" height="58"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="C"/>
@@ -442,7 +420,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Oz-lW-0Mf" customClass="KeyButton">
                             <rect key="frame" x="132" y="0.0" width="38" height="58"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="V"/>
@@ -459,7 +436,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Od-d8-51p" customClass="KeyButton">
                             <rect key="frame" x="176" y="0.0" width="38" height="58"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="B"/>
@@ -476,7 +452,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="drA-nM-pxS" customClass="KeyButton">
                             <rect key="frame" x="220" y="0.0" width="39" height="58"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="N"/>
@@ -493,7 +468,6 @@
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJR-nh-gO9" customClass="KeyButton">
                             <rect key="frame" x="265" y="0.0" width="39" height="58"/>
-                            <animations/>
                             <color key="backgroundColor" red="0.93672847747802734" green="0.9366646409034729" blue="0.93670195341110229" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="M"/>
@@ -509,7 +483,6 @@
                             </connections>
                         </view>
                     </subviews>
-                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="drA-nM-pxS" firstAttribute="width" secondItem="L2i-jo-gqh" secondAttribute="width" id="0ou-tR-eCG"/>
@@ -544,7 +517,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ken-Wc-JcY" customClass="KeyButton">
                     <rect key="frame" x="393" y="137" width="50" height="58"/>
-                    <animations/>
                     <color key="backgroundColor" white="0.79597553450000003" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="⏎"/>
@@ -558,7 +530,6 @@
                 </view>
                 <view contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQQ-vd-UhT" customClass="KeyButton">
                     <rect key="frame" x="8" y="137" width="51" height="58"/>
-                    <animations/>
                     <color key="backgroundColor" white="0.79597553453947367" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="_"/>
@@ -571,7 +542,6 @@
                     </connections>
                 </view>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="0.95999999999999996" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="cDD-Ty-1jk" firstAttribute="width" secondItem="awg-8k-fga" secondAttribute="width" id="10q-Kx-kB8"/>
